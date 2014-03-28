@@ -1,0 +1,98 @@
+div.orbitals {
+    display: block;
+}
+div.orbitals div {
+	border:3px solid #fff;
+	border-radius: 100%;
+	position: absolute;
+	top:0px;
+	left:0px;
+}
+div.orbitals div:before {
+	content: '';
+	position: absolute;
+	top:0px;
+	left:50%;
+	margin-left:-4px;
+	width:8px;
+	height:8px;
+	border:30px;
+	border-color:transparent;
+	border-bottom-color:#fff;
+	/*background: #f00;*/
+}
+div.axis{
+	background: transparent;
+	border:none;
+}
+div.sun {
+	background: #fff;
+}
+div.planet{
+	color:#fff;
+}
+div.moon {
+	opacity: 0.3;
+	border-color:#f00;
+}
+.orbit-animation {
+    animation: orbit 1s linear;
+    animation-iteration-count: infinite; 
+    -webkit-animation: orbit 1s linear;
+    -webkit-animation-iteration-count: infinite;
+}
+.orbit-counter-animation {
+    animation: orbit-counter 1s linear;
+    animation-iteration-count: infinite; 
+    -webkit-animation: orbit-counter 1s linear;
+    -webkit-animation-iteration-count: infinite;
+}
+/* rain animation */
+@keyframes orbit {
+    0% {
+    	transform:rotate(0deg);
+		-ms-transform:rotate(0deg); /* IE 9 */
+		-webkit-transform:rotate(0deg); /* Safari and Chrome */
+	}
+    100% {
+		transform:rotate(359deg);
+		-ms-transform:rotate(359deg); /* IE 9 */
+		-webkit-transform:rotate(359deg); /* Safari and Chrome */
+    }
+}
+@-webkit-keyframes orbit {
+    0% {
+    	transform:rotate(0deg);
+		-ms-transform:rotate(0deg); /* IE 9 */
+		-webkit-transform:rotate(0deg); /* Safari and Chrome */
+	}
+    100% {
+		transform:rotate(359deg);
+		-ms-transform:rotate(359deg); /* IE 9 */
+		-webkit-transform:rotate(359deg); /* Safari and Chrome */
+    }
+}
+@keyframes orbit-counter {
+    0% {
+    	transform:rotate(0deg);
+		-ms-transform:rotate(0deg); /* IE 9 */
+		-webkit-transform:rotate(0deg); /* Safari and Chrome */
+	}
+    100% {
+		transform:rotate(-359deg);
+		-ms-transform:rotate(-359deg); /* IE 9 */
+		-webkit-transform:rotate(-359deg); /* Safari and Chrome */
+    }
+}
+@-webkit-keyframes orbit-counter {
+    0% {
+    	transform:rotate(0deg);
+		-ms-transform:rotate(0deg); /* IE 9 */
+		-webkit-transform:rotate(0deg); /* Safari and Chrome */
+	}
+    100% {
+		transform:rotate(-359deg);
+		-ms-transform:rotate(-359deg); /* IE 9 */
+		-webkit-transform:rotate(-359deg); /* Safari and Chrome */
+    }
+}
